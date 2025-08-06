@@ -9,7 +9,7 @@ const PostList = () => {
 
   const orderedPosts = posts
     .slice()
-    .sort((a, b) => b.date.localCompare(a.date));
+    .sort((a, b) => b.date.localCompare(a.date)); //b.date > a.date => gives 1 i.e b comes before a
 
   const renderedPosts = orderedPosts.map((post) => (
     <article key={post.id}>
